@@ -17,9 +17,9 @@ async function checkWeather(city) {
 
 
     document.querySelector(".city").innerHTML = data.name;
-    document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + <p><sub>o</sub>C</p>;
+    document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-    document.querySelector(".wind").innerHTML = data.wind.speed + <p>km/h</p>;
+    document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
 
     if (data.weather[0].main == "Clouds") {
         weatherIcon.src = "images/clouds.png"; 
@@ -37,7 +37,7 @@ async function checkWeather(city) {
         weatherIcon.src = "images/mist.png";
     }
     document.querySelector(".weather").style.display = "block";
-    document.querySelector(".error").style.display = "block";
+    document.querySelector(".error").style.display = "none";
     }    
 }
 
