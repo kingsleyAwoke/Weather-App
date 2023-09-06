@@ -67,6 +67,11 @@ button svg {
     margin-right: 5px; */
 }
 
+button:active {
+    background-color: #00feba;
+    transform: scale(1.07, 1.07);
+}
+
 .weather-icon {
     width: 170px;
     margin-top: 30px;
@@ -117,4 +122,19 @@ button svg {
     font-size: 14px;
     margin-top: 10px;
     display: none;
+}
+
+/* FOR SMALL DEVICES */
+
+@media screen and (max-width: 576px) {
+    .search {
+        position: relative;
+        background-color: red;
+    }
+
+    button {
+        position: absolute;
+        right: -0.1px;
+        background-color: transparent;
+    }
 }
